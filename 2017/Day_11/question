@@ -1,0 +1,28 @@
+<main>
+<article class="day-desc"><h2>--- Day 11: Hex Ed ---</h2><p>Crossing the bridge, you've barely reached the other side of the stream when a program comes up to you, clearly in distress.  "It's my child process," she says, "he's gotten lost in an infinite grid!"</p>
+<p>Fortunately for her, you have plenty of experience with infinite grids.</p>
+<p>Unfortunately for you, it's a <a href="https://en.wikipedia.org/wiki/Hexagonal_tiling">hex grid</a>.</p>
+<p>The hexagons ("hexes") in <span title="Raindrops on roses and whiskers on kittens.">this grid</span> are aligned such that adjacent hexes can be found to the north, northeast, southeast, south, southwest, and northwest:</p>
+<pre><code>  \ n  /
+nw +--+ ne
+  /    \
+-+      +-
+  \    /
+sw +--+ se
+  / s  \
+</code></pre>
+<p>You have the path the child process took. Starting where he started, you need to determine the fewest number of steps required to reach him. (A "step" means to move from the hex you are in to any adjacent hex.)</p>
+<p>For example:</p>
+<ul>
+<li><code>ne,ne,ne</code> is <code>3</code> steps away.</li>
+<li><code>ne,ne,sw,sw</code> is <code>0</code> steps away (back where you started).</li>
+<li><code>ne,ne,s,s</code> is <code>2</code> steps away (<code>se,se</code>).</li>
+<li><code>se,sw,se,sw,sw</code> is <code>3</code> steps away (<code>s,s,sw</code>).</li>
+</ul>
+</article>
+<p>To begin, <a href="11/input" target="_blank">get your puzzle input</a>.</p>
+<form action="11/answer" method="post"><input name="level" type="hidden" value="1"/><p>Answer: <input autocomplete="off" name="answer" type="text"/> <input type="submit" value="[Submit]"/></p></form>
+<p>You can also <span class="share">[Share<span class="share-content">on
+  <a href="https://twitter.com/intent/tweet?text=%22Hex+Ed%22+%2D+Day+11+%2D+Advent+of+Code+2017&amp;url=https%3A%2F%2Fadventofcode%2Ecom%2F2017%2Fday%2F11&amp;related=ericwastl&amp;hashtags=AdventOfCode" target="_blank">Twitter</a>
+<a href="javascript:void(0);" onclick="var mastodon_instance=prompt('Mastodon Instance / Server Name?'); if(typeof mastodon_instance==='string' &amp;&amp; mastodon_instance.length){this.href='https://'+mastodon_instance+'/share?text=%22Hex+Ed%22+%2D+Day+11+%2D+Advent+of+Code+2017+%23AdventOfCode+https%3A%2F%2Fadventofcode%2Ecom%2F2017%2Fday%2F11'}else{return false;}" target="_blank">Mastodon</a></span>]</span> this puzzle.</p>
+</main>

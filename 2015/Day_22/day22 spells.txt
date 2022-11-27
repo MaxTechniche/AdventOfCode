@@ -1,0 +1,5 @@
+Name: Magic Missile,  Cost: 53,  Damage: 4
+Name: Drain,  Cost: 73,  Damage: 2,  Heal: 2
+Name: Shield,  Cost: 113,  Turns: 6,  Armor: 7
+Name: Poison,  Cost: 173,  Turns: 6,  Damage: 3
+Name: Recharge,  Cost: 229,  Turns: 5,  Mana: 101

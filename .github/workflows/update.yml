@@ -7,26 +7,27 @@ on:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    env:
+      SESSION_ID: ${{ secrets.SESSION_ID }}
     steps:
 
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Startup Selenium Docker
         uses: docker://selenium/standalone-chrome:latest
         with:
           args: --rm --name selenium -p 4444:4444
 
-      - name: Update README
+      - name: Download Images
         run: |
           python3 -m pip install -r requirements.txt
           python3 update-readme.py
-      - name: Commit Changes
-        uses: EndBug/add-and-commit@v5
-        with:
-          author_name: ${{ github.actor }}
-          author_email: ${{ github.actor }}@users.noreply.github.com
-          message: "Update README"
-          add: "README.md"
-          push: true
-          branch: ${{ github.ref }}
+
+      - uses: actions/checkout@v3
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Update Year Image"
+          git push

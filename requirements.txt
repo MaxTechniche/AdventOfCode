@@ -1,0 +1,5 @@
+pillow
+selenium
+requests
+python_dotenv
+webdriver_manager

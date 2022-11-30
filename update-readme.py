@@ -38,7 +38,7 @@ driver.add_cookie({"name": "session", "value": SESSION_ID})
 
 for YEAR in range(2015, CURRENT_YEAR):
     YEAR = str(YEAR)
-    FILENAME = f"assets/{YEAR}-stars.png"
+    FILENAME = f"assets/{YEAR}-starss.png"
 
     driver.get(BASE_WEB_URL + YEAR)
     driver.save_screenshot(filename=FILENAME)

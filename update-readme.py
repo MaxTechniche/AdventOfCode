@@ -49,4 +49,3 @@ for YEAR in range(2015, CURRENT_YEAR):
         # Image.Image.crop(img, (0, 85, 640, 785)).save(f'{WINDOW_SIZE}.png')
 
 driver.quit()
-print("Done")

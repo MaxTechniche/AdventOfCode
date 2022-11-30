@@ -26,7 +26,6 @@ jobs:
           pip install -U urllib3 requests
           python3 -m pip install -r requirements.txt
           python3 update-readme.py
-          echo "Done"
 
       - uses: actions/checkout@v3
       - run: |

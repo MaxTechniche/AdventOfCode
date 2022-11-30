@@ -27,10 +27,11 @@ jobs:
           python3 -m pip install -r requirements.txt
           python3 update-readme.py
 
-      - uses: actions/checkout@v3
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "Update Year Image"
-          git push
+      - name: Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_options: '--no-verify'
+          commit_user_name: GitHub Actions
+          commit_user_email: github-actions[bot]@users.noreply.github.com
+          commit_author: GitHub Actions <github-actions[bot]@users.noreply.github.com>
+          file_pattern: "assets/"

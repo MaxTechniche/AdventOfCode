@@ -37,6 +37,7 @@ driver.get(BASE_WEB_URL)
 driver.add_cookie({"name": "session", "value": SESSION_ID})
 
 for YEAR in range(2015, CURRENT_YEAR):
+    print(f"YEAR: {YEAR}")
     YEAR = str(YEAR)
     FILENAME = f"assets/{YEAR}-starss.png"
 
@@ -45,7 +46,10 @@ for YEAR in range(2015, CURRENT_YEAR):
 
     with Image.open(FILENAME) as img:
 
-        Image.Image.crop(img, (0, 150, 1300, 1700)).save(FILENAME)
-        # Image.Image.crop(img, (0, 85, 640, 785)).save(f'{WINDOW_SIZE}.png')
+        if sys.platform == "darwin":
+            Image.Image.crop(img, (0, 150, 1300, 1700)).save(FILENAME)
+        else:
+            Image.Image.crop(img, (0, 85, 640, 785)).save(FILENAME)
+    print(f"Saved {FILENAME}")
 
 driver.quit()

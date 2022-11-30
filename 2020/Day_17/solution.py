@@ -7,7 +7,7 @@ t1 = time()
 
 cuboid = defaultdict(bool)
 
-with open("2020/Day_17/input") as f:
+with open("2020/Day_17/input.txt") as f:
     for y, line in enumerate(f.read().splitlines()):
         for z, char in enumerate(line):
             cuboid[f"0:{y}:{z}"] = True if char == "#" else False
@@ -61,7 +61,7 @@ print("Part 1:", sum(cuboid.values()))
 # Part 2 Same. Just add w
 cuboid = defaultdict(bool)
 
-with open("2020/Day_17/input") as f:
+with open("2020/Day_17/input.txt") as f:
     for y, line in enumerate(f.read().splitlines()):
         for z, char in enumerate(line):
             cuboid[f"0:{y}:{z}:0"] = True if char == "#" else False

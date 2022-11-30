@@ -2,7 +2,7 @@ from time import time
 
 t1 = time()
 
-with open("2020/Day_06/input", "r") as f:
+with open("2020/Day_06/input.txt", "r") as f:
     groups = [group.split("\n") for group in f.read().split("\n\n")]
 
 total1 = 0

@@ -2,7 +2,7 @@ import re
 from itertools import permutations
 from functools import reduce
 
-path_to_file = 'J:\Tech Stuff\Documents\My Program Codes\Advent Of Code\AOC_2015\day15.txt'
+path_to_file = 'J:\Tech Stuff\Documents\My Program Codes\Advent Of Code\AOC_2015\input'
 
 ingredients = dict()
 for line in open(path_to_file):

@@ -1,6 +1,6 @@
 from copy import deepcopy
 
-lights = [[True if x == '#' else False for x in y] for y in open('AOC_2015\day18.txt').read().split('\n')]
+lights = [[True if x == '#' else False for x in y] for y in open('AOC_2015\input').read().split('\n')]
 
 def get_num_neighbors(x, y, lights):
     num_neighbors = 0

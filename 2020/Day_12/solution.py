@@ -2,7 +2,7 @@ from time import time
 
 t1 = time()
 
-with open("2020/Day_12/input") as f:
+with open("2020/Day_12/input.txt") as f:
     directions = {
         i: {"direction": x[0], "change": int(x[1:])}
         for i, x in enumerate(f.read().splitlines())

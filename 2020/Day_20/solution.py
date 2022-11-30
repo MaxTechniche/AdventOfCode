@@ -27,7 +27,7 @@ def get_sides(group):
 
 tiles = {}
 
-with open("2020/Day_20/input") as f:
+with open("2020/Day_20/input.txt") as f:
     groups = []
     count = 0
     for group in f.read().split("\n\n"):

@@ -12,7 +12,7 @@ def format_time(func):
 
 
 def main():
-    with open("2015/Day_11/input") as f:
+    with open("2015/Day_11/input.txt") as f:
         lines = f.read().splitlines()
 
 

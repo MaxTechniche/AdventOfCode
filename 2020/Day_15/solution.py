@@ -5,7 +5,7 @@ t1 = time()
 get_1 = 2020
 get_2 = 30_000_000
 
-with open("2020/Day_15/input") as f:
+with open("2020/Day_15/input.txt") as f:
     starting = list(map(int, f.read().split(",")))
 
 number_dict = {num: i for i, num in enumerate(starting[:-1])}

@@ -25,7 +25,7 @@ def merge(ranges):
     return _ranges
 
 
-with open("2020/Day_16/input") as f:
+with open("2020/Day_16/input.txt") as f:
     lines = f.read().split("\n\n")
 
 all_ranges = merge(

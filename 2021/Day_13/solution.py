@@ -4,7 +4,7 @@ from time import time
 def main():
     t1 = time()
 
-    with open("2021/Day_13/input") as f:
+    with open("2021/Day_13/input.txt") as f:
         lines = f.read().split('\n\n')
         dots = set(tuple(map(int, line.split(',')))
                    for line in lines[0].splitlines())

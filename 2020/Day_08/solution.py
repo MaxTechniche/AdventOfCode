@@ -4,7 +4,7 @@ from copy import deepcopy
 t1 = time()
 
 base = {}
-with open("2020/Day_08/input", "r") as f:
+with open("2020/Day_08/input.txt", "r") as f:
     for x, line in enumerate(f.read().splitlines()):
         code, val = line.split()
         base[x] = {"code": code, "value": int(val), "visited": False}

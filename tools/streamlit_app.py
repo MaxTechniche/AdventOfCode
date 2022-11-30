@@ -166,7 +166,7 @@ def retrieve_info():
                         print(f"DOWNLOADING DAY {day} OF YEAR {year}")
                         download_day_info(year, day)
                         if st.session_state['get-input'] is True:
-                            zip_file.write(f"aoc/{year}/Day_{day:02d}/input.txt")
+                            zip_file.write(f"aoc/{year}/Day_{day:02d}/input.txt.txt")
                         if st.session_state["get-question"] is True:
                             zip_file.write(f"aoc/{year}/Day_{day:02d}/question.html")
                         if "total_downloaded" in st.session_state:
@@ -200,7 +200,7 @@ st.text_input("Advent of Code session value:", key="AOC_COOKIE_SESSION", type="p
 
 if "VALID_AOC_COOKIE_SESSION" not in st.session_state:
     if st.session_state["AOC_COOKIE_SESSION"] != "":
-        response = requests.get("https://adventofcode.com/2015/day/1/input", cookies={"session": st.session_state["AOC_COOKIE_SESSION"]})
+        response = requests.get("https://adventofcode.com/2015/day/1/input.txt", cookies={"session": st.session_state["AOC_COOKIE_SESSION"]})
         if response.status_code == 200:
             st.session_state["VALID_AOC_COOKIE_SESSION"] = st.session_state["AOC_COOKIE_SESSION"]
             st.write("Valid cookie! YUM!")

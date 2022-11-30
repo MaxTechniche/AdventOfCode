@@ -122,7 +122,7 @@ def parse_4(bits):
 def main():
     t1 = time()
 
-    with open("2021/Day_16/input") as f:
+    with open("2021/Day_16/input.txt") as f:
         sections = f.read().split('\n\n')
         hex_packet = sections[0].strip()
         hex_to_bin = [line.split(' = ') for line in sections[1].splitlines()]

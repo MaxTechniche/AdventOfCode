@@ -4,7 +4,7 @@ print('Running...')
 
 t1 = time()
 
-with open("2021/Day_06/input") as f:
+with open("2021/Day_06/input.txt") as f:
     fish = f.read()
 
 lanternfish_count = {}

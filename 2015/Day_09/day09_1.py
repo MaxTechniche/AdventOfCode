@@ -1,4 +1,4 @@
-with open('day09.txt') as f:
+with open("input.txt") as f:
     input_ = f.read().split('\n')
     
 input_ = [x.split(' = ')[::-1] for x in input_]

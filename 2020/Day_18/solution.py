@@ -4,7 +4,7 @@ from math import prod
 
 t1 = time()
 
-with open("2020/Day_18/input") as f:
+with open("2020/Day_18/input.txt") as f:
     lines = f.read().splitlines()
 
 

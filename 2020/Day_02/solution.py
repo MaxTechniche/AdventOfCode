@@ -2,7 +2,7 @@ import time
 
 t1 = time.time()
 
-with open("2020/Day_02/input", "r") as f:
+with open("2020/Day_02/input.txt", "r") as f:
     passwords = f.readlines()
 
 count1 = 0

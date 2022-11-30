@@ -17,7 +17,7 @@ def get(number):
     return 0
 
 
-with open("2020/Day_07/input", "r") as f:
+with open("2020/Day_07/input.txt", "r") as f:
     bag_rules = f.read().splitlines()
 
 bags = {}

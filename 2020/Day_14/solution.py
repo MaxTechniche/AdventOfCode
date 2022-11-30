@@ -7,7 +7,7 @@ from itertools import product
 
 t1 = time()
 
-with open("2020/Day_14/input") as f:
+with open("2020/Day_14/input.txt") as f:
     instructions = f.read().splitlines()
 
 

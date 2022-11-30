@@ -56,7 +56,7 @@ def find_paths(current_cave, visited_caves, part2=False, lowercase_twice=False):
 def main():
     t1 = time()
 
-    with open("2021/Day_12/input") as f:
+    with open("2021/Day_12/input.txt") as f:
         connections = f.read().splitlines()
 
     caves = {}

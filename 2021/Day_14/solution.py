@@ -7,7 +7,7 @@ def main():
 
     prev_counter = Counter()
 
-    with open("2021/Day_14/input") as f:
+    with open("2021/Day_14/input.txt") as f:
         lines = f.read().split('\n\n')
         start = lines[0]
         insertions = [line.split(' -> ') for line in lines[1].splitlines()]

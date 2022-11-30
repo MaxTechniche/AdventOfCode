@@ -3,7 +3,7 @@ from copy import deepcopy
 
 t1 = time()
 
-with open("2021/Day_03/input") as f:
+with open("2021/Day_03/input.txt") as f:
     codes = f.read().splitlines()
     
 codes = list(map(list, zip(*codes)))

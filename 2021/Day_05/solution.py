@@ -2,7 +2,7 @@ from time import time
 
 t1 = time()
 
-with open("2021/Day_05/input") as f:
+with open("2021/Day_05/input.txt") as f:
     lines = f.read().replace(' -> ', ',')
     lines = lines.splitlines()
     

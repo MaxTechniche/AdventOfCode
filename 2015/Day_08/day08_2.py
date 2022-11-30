@@ -1,6 +1,6 @@
 import re
 
-with open('day08.txt') as f:
+with open("input.txt") as f:
     input_ = f.read().split('\n')
     
 pattern = r'\\|"'

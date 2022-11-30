@@ -1,4 +1,4 @@
-input_ = int(open('AOC_2015\day20.txt').read().split('\n')[0])
+input_ = int(open('AOC_2015\input').read().split('\n')[0])
 
 numbers = [0 for x in range(input_//10+1)]
 

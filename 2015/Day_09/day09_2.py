@@ -1,7 +1,7 @@
 """
 import random
 
-with open('day09.txt') as f:
+with open("input.txt") as f:
     input_ = f.read().split('\n')
     
 input_ = [x.split(' = ')[::-1] for x in input_]
@@ -52,7 +52,7 @@ from itertools import permutations
 
 places = set()
 distances = dict()
-for line in open('day09.txt'):
+for line in open("input.txt"):
     (source, _, dest, _, distance) = line.split()
     places.add(source)
     places.add(dest)

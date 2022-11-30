@@ -22,7 +22,7 @@ class LightGrid(object):
             total += sum(x)
         return total
 
-with open('day06.txt') as f:
+with open("input.txt") as f:
     input_ = f.read().split('\n')
 
 grid = LightGrid(1000)

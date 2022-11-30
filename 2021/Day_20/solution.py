@@ -65,7 +65,7 @@ def get_lit(image):
 def main():
     t1 = time()
 
-    with open("2021/Day_20/input") as f:
+    with open("2021/Day_20/input.txt") as f:
         lines = f.read().splitlines()
     code = lines[0]
     image = lines[2:]

@@ -3,7 +3,7 @@ from time import time
 t1 = time()
 
 
-with open("2020/Day_09/input") as f:
+with open("2020/Day_09/input.txt") as f:
     lines = list(map(int, f.read().splitlines()))
 
 print(len(lines))

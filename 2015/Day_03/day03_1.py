@@ -1,4 +1,4 @@
-with open('day03.txt') as f:
+with open("input.txt") as f:
     input_ = f.read()
     
 directions = {'^':(0, 1), 'v':(0, -1), '>':(1, 0), '<':(-1, 0)}

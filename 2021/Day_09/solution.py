@@ -2,7 +2,7 @@ from time import time
 
 t1 = time()
 
-with open("2021/Day_09/input") as f:
+with open("2021/Day_09/input.txt") as f:
     heightmap = [list(map(int, list(line))) for line in f.read().splitlines()]
 
 risk = 0

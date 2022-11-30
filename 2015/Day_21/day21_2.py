@@ -15,7 +15,7 @@ w = 'Weapons'
 a = 'Armor'
 r = 'Rings'
 
-boss_input = open('AOC_2015\day21.txt').read().split('\n')
+boss_input = open('AOC_2015\input').read().split('\n')
 boss = {}
 for line in boss_input:
     x, y = line.split(': ')

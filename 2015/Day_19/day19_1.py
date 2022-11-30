@@ -3,7 +3,7 @@ from collections import defaultdict
 
 replacements = defaultdict(list)
 
-for line in open('AOC_2015\day19.txt'):
+for line in open('AOC_2015\input'):
     a, b = re.match('(\w+) => (\w+)', line).groups()
     replacements[a].append(b)
 

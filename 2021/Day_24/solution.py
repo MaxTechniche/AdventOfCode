@@ -86,7 +86,7 @@ def solve(ins, w=None, x=0, y=0, z=0, current_number=''):
 def main():
     t1 = time()
 
-    with open("2021/Day_24/input") as f:
+    with open("2021/Day_24/input.txt") as f:
         ins = f.read().splitlines()
 
     ins = parse(ins)

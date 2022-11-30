@@ -1,6 +1,6 @@
 from itertools import combinations
 
-containers = sorted(list(map(int, open('AOC_2015\day17.txt').read().split('\n'))))
+containers = sorted(list(map(int, open('AOC_2015\input').read().split('\n'))))
 print(containers)
 
 count = 0

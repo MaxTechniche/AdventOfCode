@@ -33,7 +33,7 @@ class Reindeer(object):
 seconds = 2503
 
 reindeers = []
-for line in open('day14.txt'):
+for line in open("input.txt"):
     rd = re.match('(\w+) can fly (\d+) km/s for (\d+) seconds, but then must rest for (\d+) seconds\.', line)
     name, speed, stam, rest = rd.group(1, 2, 3, 4)
     reindeers.append(Reindeer(name, speed, stam, rest))

@@ -3,7 +3,7 @@ from collections import defaultdict
 from itertools import permutations
 
 name_connections = defaultdict(dict)
-for line in open('day13.txt'):
+for line in open("input.txt"):
     found = re.search('(\w+) would (gain|lose) (\d+) happiness units by sitting next to (\w+)\.', line)
     name1, option, mutual_happiness, name2 = found.group(1, 2, 3, 4)
     name_connections[name1][name2] = int(mutual_happiness) * (-1 if (option == 'lose') else 1)

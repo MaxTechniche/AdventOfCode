@@ -2,7 +2,7 @@ from time import time
 
 t1 = time()
 
-with open("2021/Day_08/input") as f:
+with open("2021/Day_08/input.txt") as f:
     displays = f.read().splitlines()
 
 part_1_unique = 0

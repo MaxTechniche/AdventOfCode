@@ -4,7 +4,7 @@ from time import time
 def main():
     t1 = time()
 
-    with open("2021/Day_17/input") as f:
+    with open("2021/Day_17/input.txt") as f:
         x, y = f.read().split(', ')
         x = x.split(': ')[1]
         xmin, xmax = x.split('..')

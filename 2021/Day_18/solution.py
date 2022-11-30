@@ -138,7 +138,7 @@ def parse(number, depth=0):
 def main():
     t1 = time()
 
-    with open("2021/Day_18/input") as f:
+    with open("2021/Day_18/input.txt") as f:
         ns = f.read().splitlines()
 
     prev_n = parse(le(ns[0]))

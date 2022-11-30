@@ -59,12 +59,12 @@ def get_day_info(year, day, options):
     make_day.make_day(day, year, overwrite=overwrite, auto=auto, options=options)
     # Get the input for the day
     question_url = f"https://adventofcode.com/{year}/day/{day}"
-    input_url = question_url + "/input"
+    input_url = question_url + "/input.txt"
 
     if get_input is True:
         response = get(input_url, cookies=cookies)
         if response.status_code == 200:
-            with open(f"{year}/Day_{day:02d}/input.txt", "w") as f:
+            with open(f"{year}/Day_{day:02d}/input.txt.txt", "w") as f:
                 f.write(response.text)
         else:
             print(f"Failed to get input for day {day}, year {year}")

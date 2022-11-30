@@ -4,7 +4,7 @@ from operator import mul
 
 t1 = time()
 
-with open("2020/Day_03/input", "r") as f:
+with open("2020/Day_03/input.txt", "r") as f:
     trees = f.read().splitlines()
 
 width = len(trees[0])

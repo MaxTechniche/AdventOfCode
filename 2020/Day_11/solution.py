@@ -3,7 +3,7 @@ from copy import deepcopy
 
 t1 = time()
 
-with open("2020/Day_11/input") as f:
+with open("2020/Day_11/input.txt") as f:
     og_tiles = [list(tile) for tile in f.read().splitlines()]
 
 

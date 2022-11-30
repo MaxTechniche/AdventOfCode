@@ -3,7 +3,7 @@ from itertools import permutations
 from functools import reduce
 from operator import mul
 
-path_to_file = 'J:\Tech Stuff\Documents\My Program Codes\Advent Of Code\AOC_2015\day15.txt'
+path_to_file = 'J:\Tech Stuff\Documents\My Program Codes\Advent Of Code\AOC_2015\input'
 
 ingredients = dict()
 for line in open(path_to_file):
@@ -38,7 +38,7 @@ from functools import reduce
 from operator import mul
 
 m = []
-for line in open('J:\Tech Stuff\Documents\My Program Codes\Advent Of Code\AOC_2015\day15.txt'):
+for line in open('J:\Tech Stuff\Documents\My Program Codes\Advent Of Code\AOC_2015\input'):
     c, d, f, t, cal = map(int, re.findall('-?\d+', line))
     m.append([c, d, f, t, cal])
 m = np.array(m)

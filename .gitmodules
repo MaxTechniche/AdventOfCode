@@ -1,0 +1,3 @@
+[submodule "Aoc-Day-Downloader"]
+	path = Aoc-Day-Downloader
+	url = ./Aoc-Day-Downloader

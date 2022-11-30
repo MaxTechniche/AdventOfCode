@@ -105,7 +105,7 @@ def orient_scanner(match, scanners, kso):
 def main():
     t1 = time()
 
-    with open("2021/Day_19/input") as f:
+    with open("2021/Day_19/input.txt") as f:
         lines = f.read().split('\n\n')
 
     scanners = {}

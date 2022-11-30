@@ -3,7 +3,7 @@ from collections import defaultdict
 
 t1 = time()
 
-with open("2020/Day_10/input") as f:
+with open("2020/Day_10/input.txt") as f:
     lines = sorted(map(int, f.read().splitlines()))
 
 differences = defaultdict(int)

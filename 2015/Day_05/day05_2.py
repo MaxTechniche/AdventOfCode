@@ -1,6 +1,6 @@
 import re
 
-with open('day05.txt') as f:
+with open("input.txt") as f:
     input_ = f.read().split('\n')
     
 def naughty_or_nice(text):

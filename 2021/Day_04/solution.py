@@ -38,7 +38,7 @@ def board_score(board, numbers):
                 score += num
     return score * last_num
 
-with open("2021/Day_04/input") as f:
+with open("2021/Day_04/input.txt") as f:
     lines = f.read().split('\n\n')
     picked_numbers = list(map(int, lines[0].split(',')))
     boards = lines[1:]

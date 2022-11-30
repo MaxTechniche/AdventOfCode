@@ -4,7 +4,7 @@ import re
 
 t1 = time()
 
-with open("2020/Day_04/input", "r") as f:
+with open("2020/Day_04/input.txt", "r") as f:
     passports = [
         dict(code.split(":") for code in port.split())
         for port in f.read().split("\n\n")

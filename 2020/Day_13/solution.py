@@ -37,7 +37,7 @@ def get_dist(busses):
     return step
 
 
-with open("2020/Day_13/input") as f:
+with open("2020/Day_13/input.txt") as f:
     file = f.readlines()
     early_time = int(file[0])
     busses = list(enumerate(map(int, re.findall("(\d+)", file[1]))))

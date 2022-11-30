@@ -1,4 +1,4 @@
-with open('day02.txt') as f:
+with open("input.txt") as f:
     input_ = [sorted([int(y) for y in x.split('x')]) for x in f.read().split('\n')]
     
 total = 0

@@ -3,7 +3,7 @@ from pprint import pprint
 
 t1 = time()
 
-with open("2021/Day_11/input") as f:
+with open("2021/Day_11/input.txt") as f:
     octos = [list(map(int, list(x))) for x in f.read().splitlines()]
 
 

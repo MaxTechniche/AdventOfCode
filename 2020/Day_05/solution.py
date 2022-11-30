@@ -2,7 +2,7 @@ from time import time
 
 t1 = time()
 
-with open("2020/Day_05/input", "r") as f:
+with open("2020/Day_05/input.txt", "r") as f:
     people = f.read().splitlines()
 
 seat_ids = set()

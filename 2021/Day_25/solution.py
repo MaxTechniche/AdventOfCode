@@ -44,7 +44,7 @@ def south_move(m):
 def main():
     t1 = time()
 
-    with open("2021/Day_25/input") as f:
+    with open("2021/Day_25/input.txt") as f:
         m = [list(line) for line in f.read().splitlines()]
 
     c = deepcopy(m)

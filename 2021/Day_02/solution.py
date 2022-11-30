@@ -2,7 +2,7 @@ from time import time
 
 t1 = time()
 
-with open("2021/Day_02/input") as f:
+with open("2021/Day_02/input.txt") as f:
     lines = f.read().splitlines()
 
 horizontal_position = 0
@@ -52,7 +52,7 @@ print("Time:", time() - t1)
 
 # t1 = time()
 
-# with open("2021/Day_02/input") as f:
+# with open("2021/Day_02/input.txt") as f:
 #     lines = [x.split(" ") for x in f.read().splitlines()]
 
 # hor = 0
@@ -76,7 +76,7 @@ print("Time:", time() - t1)
 # # Part 2
 # t1 = time()
 
-# with open("2021/Day_02/input") as f:
+# with open("2021/Day_02/input.txt") as f:
 #     lines = [x.split(" ") for x in f.read().splitlines()]
 
 # hor = 0

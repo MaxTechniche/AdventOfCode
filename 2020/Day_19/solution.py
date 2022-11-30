@@ -5,7 +5,7 @@ import re
 
 t1 = time()
 
-with open("2020/Day_19/input") as f:
+with open("2020/Day_19/input.txt") as f:
     r, m = f.read().split("\n\n")
 
 rules = {}

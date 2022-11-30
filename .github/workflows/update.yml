@@ -9,15 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SESSION_ID: ${{ secrets.SESSION_ID }}
+
+    services:
+      selenium:
+        image: selenium/standalone-chrome:latest
+        ports: 
+          - 4444:4444
+
     steps:
 
       - name: Checkout Repository
         uses: actions/checkout@v3
-
-      - name: Startup Selenium Docker
-        uses: docker://selenium/standalone-chrome:latest
-        with:
-          args: --rm --name selenium -p 4444:4444
 
       - name: Download Images
         run: |

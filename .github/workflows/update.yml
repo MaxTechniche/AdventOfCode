@@ -1,0 +1,32 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '20**/**'
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Startup Selenium Docker
+        uses: docker://selenium/standalone-chrome:latest
+        with:
+          args: --rm --name selenium -p 4444:4444
+
+      - name: Update README
+        run: |
+          python3 -m pip install -r requirements.txt
+          python3 update-readme.py
+      - name: Commit Changes
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: ${{ github.actor }}
+          author_email: ${{ github.actor }}@users.noreply.github.com
+          message: "Update README"
+          add: "README.md"
+          push: true
+          branch: ${{ github.ref }}

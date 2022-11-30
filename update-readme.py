@@ -26,12 +26,10 @@ options.add_argument("--headless")
 service = chrome.service.Service("localhost:4444")
 
 # service = chrome.service.Service(ChromeDriverManager().install())
+# Not needed ?
 driver = webdriver.Chrome(options=options, service=service)
-
-if WINDOW_SIZE := os.environ.get("WINDOW_SIZE"):
-    driver.set_window_size(*WINDOW_SIZE.split(","))
-if WINDOW_POSITION := os.environ.get("WINDOW_POSITION"):
-    driver.set_window_position(*WINDOW_POSITION.split(","))
+WINDOW_SIZE = os.environ.get("WINDOW_SIZE", "1000,1000")
+driver.set_window_size(*WINDOW_SIZE.split(","))
 
 driver.get(BASE_WEB_URL)
 driver.add_cookie({"name": "session", "value": SESSION_ID})

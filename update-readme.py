@@ -45,7 +45,7 @@ driver.get(BASE_WEB_URL)
 driver.add_cookie({"name": "session", "value": SESSION_ID})
 
 for YEAR in range(2015, CURRENT_YEAR + 1):
-    print(f"YEAR: {YEAR}", file=sys.stderr)
+    print(f"YEAR: {YEAR}", file=sys.stderr, flush=True)
     YEAR = str(YEAR)
     TOTAL_STARS_FILE = f"assets/{YEAR}-total.png"
     FILENAME = f"assets/{YEAR}-stars.png"
@@ -68,7 +68,7 @@ for YEAR in range(2015, CURRENT_YEAR + 1):
                 ).save(TOTAL_STARS_FILE)
             else:
                 Image.open(WHITE_SQUARE).save(TOTAL_STARS_FILE)
-            Image.Image.crop(img, (0, 150, 1300, 1700)).resize((320, 350)).save(
+            Image.Image.crop(img, (0, 150, 1300, 1700)).save(
                 FILENAME
             )
         else:
@@ -76,17 +76,17 @@ for YEAR in range(2015, CURRENT_YEAR + 1):
                 Image.Image.crop(
                     img,
                     (
-                        725 + 12 * (CHARACTERS + 1),
-                        0,
-                        725 + 12 * (CHARACTERS + 5),
+                        726 + 12 * (CHARACTERS + 1),
+                        10,
+                        726 + 12 * (CHARACTERS + 5),
                         30,
                     ),
                 ).save(TOTAL_STARS_FILE)
             else:
                 Image.open(WHITE_SQUARE).save(TOTAL_STARS_FILE)
-            Image.Image.crop(img, (0, 85, 640, 785)).resize((320, 350)).save(
+            Image.Image.crop(img, (0, 85, 640, 785)).save(
                 FILENAME
             )
-    print(f"Saved {FILENAME}", file=sys.stderr)
+    print(f"Saved {FILENAME}", file=sys.stderr, flush=True)
 
 driver.quit()

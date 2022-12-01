@@ -1,4 +1,7 @@
+import pytest
+
 from time import perf_counter
+
 
 
 def format_time(func):
@@ -10,6 +13,8 @@ def format_time(func):
         print("Time: {:.3f} seconds".format(time_delta))
     return wrapper()
 
+def test_samples():
+    assert True
 
 def main():
     with open("2015/Day_02/input.txt") as f:

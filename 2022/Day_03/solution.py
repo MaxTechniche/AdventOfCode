@@ -1,3 +1,5 @@
+import pytest
+
 from time import perf_counter
 
 
@@ -11,9 +13,33 @@ def format_time(func):
     return wrapper()
 
 
+def compute1(data):
+    pass
+
+
+def compute2(data):
+    pass
+
+
 def main():
     with open("2022/Day_03/input.txt") as f:
-        lines = f.read().splitlines()
+        data = f.read()
+    answer = compute1(data)
+    print(answer)
+
+
+@pytest.mark.parametrize("input_, expected", [
+    ("", 0),
+    ])
+def test1(input_, expected):
+    assert compute1(input_) == expected
+
+
+@pytest.mark.parametrize("input_, expected", [
+    ("", 0),
+    ])
+def test2(input_, expected):
+    assert compute2(input_) == expected
 
 
 if __name__ == "__main__":

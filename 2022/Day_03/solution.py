@@ -40,7 +40,7 @@ def compute2(data):
     rucksacks = data.split("\n")
     total_priority = 0
     for r in range(0, len(rucksacks), 3):
-        rucksack_group = rucksacks[r : r + 3]
+        rucksack_group = rucksacks[r:r + 3]
         for letter in rucksack_group[0]:
             if letter in rucksack_group[1] and letter in rucksack_group[2]:
                 total_priority += priorities[letter]

@@ -9,37 +9,44 @@ def format_time(func):
         func(*args, **kwargs)
         t2 = perf_counter()
         time_delta = t2 - t1
-        print("Time: {:.3f} seconds".format(time_delta))
+        if time_delta * 1000 < 1:
+            print(f"{time_delta * 1000000:.3f} μs")
+        elif time_delta < 1:
+            print(f"{time_delta * 1000:.3f} ms")
+        else:
+            print(f"{time_delta:.3f} s")
     return wrapper()
 
 
-def compute1(data):
-    pass
-
-
-def compute2(data):
-    pass
+def compute(data, num_unique=4):
+    for i, character in enumerate(data):
+        if len(set(data[i:i+num_unique])) == num_unique:
+            return i + num_unique
 
 
 def main():
     with open("2022/Day_06/input.txt") as f:
         data = f.read()
-    answer = compute1(data)
+    answer = compute(data, 4)
+    print(answer)
+    answer = compute(data, 14)
     print(answer)
 
 
-@pytest.mark.parametrize("input_, expected", [
-    ("", 0),
+@pytest.mark.parametrize("data, unique, expected", [
+    ("mjqjpqmgbljsphdztnvjfqwrcgsmlb", 4, 7),
+    ("mjqjpqmgbljsphdztnvjfqwrcgsmlb", 14, 19),
+    ("bvwbjplbgvbhsrlpgdmjqwftvncz", 4, 5),
+    ("bvwbjplbgvbhsrlpgdmjqwftvncz", 14, 23),
+    ("nppdvjthqldpwncqszvftbrmjlhg", 4, 6),
+    ("nppdvjthqldpwncqszvftbrmjlhg", 14, 23),
+    ("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg", 4, 10),
+    ("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg", 14, 29),
+    ("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw", 4, 11),
+    ("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw", 14, 26),
     ])
-def test1(input_, expected):
-    assert compute1(input_) == expected
-
-
-@pytest.mark.parametrize("input_, expected", [
-    ("", 0),
-    ])
-def test2(input_, expected):
-    assert compute2(input_) == expected
+def test1(data, unique, expected):
+    assert compute(data, unique) == expected
 
 
 if __name__ == "__main__":

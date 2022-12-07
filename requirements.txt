@@ -2,3 +2,5 @@ pillow
 selenium
 python_dotenv
 webdriver_manager
+requests
+beautifulsoup4

@@ -44,7 +44,7 @@ driver.set_window_size(*WINDOW_SIZE.split(","))
 driver.get(BASE_WEB_URL)
 driver.add_cookie({"name": "session", "value": SESSION_ID})
 
-for YEAR in range(2015, CURRENT_YEAR + 1):
+for YEAR in range(2015, CURRENT_YEAR):
     print(f"YEAR: {YEAR}", file=sys.stderr, flush=True)
     YEAR = str(YEAR)
     TOTAL_STARS_FILE = f"assets/{YEAR}-total.png"

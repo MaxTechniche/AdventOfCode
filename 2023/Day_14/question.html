@@ -1,0 +1,48 @@
+<main>
+<article class="day-desc"><h2>--- Day 14: Parabolic Reflector Dish ---</h2><p>You reach the place where all of the mirrors were pointing: a massive <a href="https://en.wikipedia.org/wiki/Parabolic_reflector" target="_blank">parabolic reflector dish</a> <span title="Why, where do you attach YOUR massive parabolic reflector dishes?">attached</span> to the side of another large mountain.</p>
+<p>The dish is made up of many small mirrors, but while the mirrors themselves are roughly in the shape of a parabolic reflector dish, each individual mirror seems to be pointing in slightly the wrong direction. If the dish is meant to focus light, all it's doing right now is sending it in a vague direction.</p>
+<p>This system must be what provides the energy for the lava! If you focus the reflector dish, maybe you can go where it's pointing and use the light to fix the lava production.</p>
+<p>Upon closer inspection, the individual mirrors each appear to be connected via an elaborate system of ropes and pulleys to a large metal platform below the dish. The platform is covered in large rocks of various shapes. Depending on their position, the weight of the rocks deforms the platform, and the shape of the platform controls which ropes move and ultimately the focus of the dish.</p>
+<p>In short: if you move the rocks, you can focus the dish. The platform even has a control panel on the side that lets you <em>tilt</em> it in one of four directions! The rounded rocks (<code>O</code>) will roll when the platform is tilted, while the cube-shaped rocks (<code>#</code>) will stay in place. You note the positions of all of the empty spaces (<code>.</code>) and rocks (your puzzle input). For example:</p>
+<pre><code>O....#....
+O.OO#....#
+.....##...
+OO.#O....O
+.O.....O#.
+O.#..O.#.#
+..O..#O..O
+.......O..
+#....###..
+#OO..#....
+</code></pre>
+<p>Start by tilting the lever so all of the rocks will slide <em>north</em> as far as they will go:</p>
+<pre><code>OOOO.#.O..
+OO..#....#
+OO..O##..O
+O..#.OO...
+........#.
+..#....#.#
+..O..#.O.O
+..O.......
+#....###..
+#....#....
+</code></pre>
+<p>You notice that the support beams along the north side of the platform are <em>damaged</em>; to ensure the platform doesn't collapse, you should calculate the <em>total load</em> on the north support beams.</p>
+<p>The amount of load caused by a single rounded rock (<code>O</code>) is equal to the number of rows from the rock to the south edge of the platform, including the row the rock is on. (Cube-shaped rocks (<code>#</code>) don't contribute to load.) So, the amount of load caused by each rock in each row is as follows:</p>
+<pre><code>OOOO.#.O.. 10
+OO..#....#  9
+OO..O##..O  8
+O..#.OO...  7
+........#.  6
+..#....#.#  5
+..O..#.O.O  4
+..O.......  3
+#....###..  2
+#....#....  1
+</code></pre>
+<p>The total load is the sum of the load caused by all of the <em>rounded rocks</em>. In this example, the total load is <code><em>136</em></code>.</p>
+<p>Tilt the platform so that the rounded rocks all roll north. Afterward, <em>what is the total load on the north support beams?</em></p>
+</article>
+<p>To begin, <a href="14/input" target="_blank">get your puzzle input</a>.</p>
+<form action="14/answer" method="post"><input name="level" type="hidden" value="1"/><p>Answer: <input autocomplete="off" name="answer" type="text"/> <input type="submit" value="[Submit]"/></p></form>
+</main>
